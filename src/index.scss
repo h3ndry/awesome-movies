@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    // font-size: 1rem;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin: 0 auto;
+
+    nav {
+        background-color: #f8b133;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            background-color: #4a4b4d;
+            padding: 1rem 2rem 1rem 1rem;
+            color: white;
+
+            a {
+                font-size: 1.4rem;
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+
+        .nav-list {
+            display: none;
+            margin: 0 auto;
+            list-style: none;
+
+            li {
+                a {
+                    text-decoration: none;
+                    font-size: 1.2rem;
+                    color: #4a4b4d;
+                }
+            }
+        }
+
+        ul li:not(:last-child) {
+            margin-right: 2rem;
+        }
+
+        aside {
+            position: relative;
+            .menu {
+                height: 4rem;
+                width: 4rem;
+                display: grid;
+                align-items: center;
+            }
+            .menu span {
+                background-color: #4a4b4d;
+                display: block;
+                width: 80%;
+                height: 4px;
+            }
+
+            .side-list {
+                display: none;
+                position: absolute;
+                background-color: #4a4b4d;
+                list-style: none;
+                right: 0;
+                z-index: 99;
+
+                li a {
+                    display: inline-block;
+                    color: white;
+                    padding: 1rem;
+                }
+            }
+
+            .side-list.active {
+                display: block;
+            }
+        }
+    }
+}
+
+.home {
+    padding: 4rem 0;
+    display: grid;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    a {
+        justify-self: center;
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        background-color: #00b050;
+        font-size: 1.4rem;
+        color: black;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+}
+
+.about {
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.movie-list {
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+
+    .movie-card {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        border: solid 2px black;
+    }
+
+    .movie-card img {
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .movie-card .bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        color: black;
+        padding: 0.5rem 0;
+        text-align: center;
+        // background-color: blue;
+        transform: translate(40%, 30%) rotate(45deg);
+    }
+}
+.load-more {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+@media (min-width: 500px) {
+    .wrapper aside {
+        display: none;
+    }
+    .wrapper .nav-list {
+        display: flex !important;
+    }
+}
+
+.movie-page {
+    margin: 2rem 0;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: minmax(200px, 450px) 1fr;
+    grid-gap: 2rem;
+
+    .img img {
+        width: 100%;
+    }
+    .rating {
+        margin: 3rem 0;
+        display: inline-block;
+        padding: .8rem 1.5rem;
+    }
+
+    span {
+        padding-right: .5rem;
+    }
+
+    .book-form {
+        grid-column: 2/3;
+    }
+
+    .book-form input {
+        display: block;
+        width: 80%;
+        margin-bottom: 1rem;
+        padding: .8rem;
+        border: solid 1px lightgray;
+        border-radius: 5px;
+    }
+
+    .book-form .btn {
+        background-color: #67c96a;
+    }
+}
