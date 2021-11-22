@@ -170,7 +170,7 @@ code {
     margin: 2rem 0;
     padding: 0 2rem;
     display: grid;
-    grid-template-columns: minmax(200px, 450px) 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 2rem;
 
     .img img {
@@ -179,27 +179,36 @@ code {
     .rating {
         margin: 3rem 0;
         display: inline-block;
-        padding: .8rem 1.5rem;
+        padding: 0.8rem 1.5rem;
     }
 
     span {
-        padding-right: .5rem;
-    }
-
-    .book-form {
-        grid-column: 2/3;
+        padding-right: 0.5rem;
     }
 
     .book-form input {
         display: block;
-        width: 80%;
+        width: 90%;
         margin-bottom: 1rem;
-        padding: .8rem;
+        padding: 0.8rem;
         border: solid 1px lightgray;
         border-radius: 5px;
     }
 
     .book-form .btn {
         background-color: #67c96a;
+    }
+}
+@media (min-width: 600px) {
+    .movie-page {
+        grid-template-columns: minmax(200px, 450px) 1fr;
+    }
+
+    .book-form input {
+        width: 80%;
+    }
+
+    .book-form {
+        grid-column: 2/3;
     }
 }
