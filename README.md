@@ -6,10 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - The movie database API KEY. You can get it at [The Movie DB API](https://developers.themoviedb.org/3/movies/get-movie-details)
 - The Trello API KEY and access token. You can get it at  [Trello API](https://developer.atlassian.com/cloud/trello/rest/api-group-cards/)
 
-Create an `.env` file.
-### `touch .env`
+## Create an `.env` file.
+`touch .env`
 
-Copy and paste the following variable and edit them with your API Key
+Copy and paste the following variable to the file you just created and add your API Keys
 
 ```
 REACT_APP_MOVIE_API_KEY=<<your api key here>>
